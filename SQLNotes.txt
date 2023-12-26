@@ -1,0 +1,96 @@
+		SQL (Structured Query Language)
+
+* SQL: It is a language used to query, update, delete or add new data to the database.
+
+* Database: It is the place where interrelated data are kept together. Database examples;
+	To-do list, Human Brain, Phone Book, Hard Disk, Cloud Systems
+
+* Advantages of Digital Databases;
+	1. Large amounts of information can be stored.
+	2. Entry is easy.
+	3. It provides CRUD(Create, Read, Update, Delete) convenience.
+	4. Accessing data is easy.
+	5. It is safe.
+
+* Database testing can be done separately with SQL, API and Selenium.
+
+* Database Manegement System (DBMS)
+	1. Regulates access to the database.
+	2. It ensures data security.
+	3. Regulates CRUD operations.
+	4. It gets reports from the database.
+
+* In SQL, all data is stored in tables.
+    The rows in the table are called Row or Record.
+    The columns in the table are called Column or Field.
+    The top row in the table is called Headers and is not data. It contains only the column names.
+
+* Relational Tables
+	1. All of the tables and relationships are called Schema. 
+	2. Relationships between tables must be clear. 
+	3. Switching between tables should be easy.
+
+* The most used DBMSs;
+	Microsoft SQL
+	MySQL
+	Oracle SQL
+	PostgreSQL
+
+* SQL Commands
+	1. Data Definition Language(DDL): It deals with the table itself.
+		Create: Creates a table.
+		Drop: Deletes the table.
+		Alter: Updates the table.
+	2. Data Manipulation Language(DML): It deals with the data itself.
+		Insert: Adds data to the table.
+		Delete: Deletes the data in the table.
+		Update: Updates the data in the table.
+	3. Data Query Language(DQL):It deals with the data itself.
+		Select: Lists the data in the table.
+	4. Data Control Language (DCL): It concerns SQL Developers.
+		Grant: Used to grant authority to a user.
+		Revoke: It is used to revoke the authority given to a user.
+
+* SQL Data Types
+	1. String Data Types
+		a. char(size): It is used for String Data of a certain length, such as Telephone Number, Postal 		Code
+		b. varchar(size): It is used for String Data of unknown length, such as Name, Surname, Address 			etc.
+	2. Numeric Data Types
+		a. numeric(p,s)
+			p indicates the amount of digits used in the number.
+			s indicates the amount of digits used in the decimal part.
+			For example; When we write numeric(6,2), we can store data such as 1234.56.
+			It is not preferred. Instead, real data type is preferred.
+		b. int: It takes values between -2147483648 and 2147483647.
+		c. real: It is used for decimal numbers.
+	3. Date Data Type
+		a. date: It is used to store dates in columns in the table. Format includes Year, Month, Day. `			Standard format: YYYY-MM-dd. For example; 1982-07-01
+
+* Constraint
+	1. Unique: All data in a column is unique.
+	2. Not Null: All data in a column does not contain Null.
+	3. Check: Used to limit the range of values to be placed in a column.
+	4. Primary Key:
+		All data in a column must be Unique and must not contain Null. That is, Unique + Not Null.
+		Primary Key is used when we want to reach only one person using a data.
+		It is not mandatory to have a Primary Key in every table.
+		We can use maximum 1 Primary Key in a table.
+	5. Foreign Key:
+		It is used to reference the Primary Key in another table. 
+		Thus, a parent-child relationship is established between the tables. 
+		In other words, Relational Tables are provided.
+		It may contain repeated and Null values.
+		More than one Foreign Key restriction can be used.
+		The table containing the Foreign Key is called Child Table, and 
+		The table containing the Primary Key is called Parent Table.
+
+* Composite Key: If a column alone does not have the feature of being a Primary Key, a Primary Key can be created by combining two columns to obtain this feature. This situation is called Composite Key.
+
+* If the Primary Key represents real data in the world (Email, Telephone Number, Postal Code, etc.), it is called Natural Key.
+  If the Primary Key does not represent the real data in the world (created sequence number when adding records, etc.), it is called Surrogate Key.
+
+* One to One Relation: Reaching from data in one table to data in another table is called One to One Relation. Here, there is a column with the same name in the first and second table. Here, the relationship has been established without using Foreign Key.
+
+  One to Many Relation: Reaching from data in one table to data in another table is called One to Many Relation. Here two tables have the same column and the second table has more than one data associated with this column. Here, the relationship has been established without using Foreign Key.
+
+  Many to Many Relation: Reaching from the data in one table to the data in a second table and from the data in the second table to multiple data in the third table is called Many to Many Relation. Here, the relationship has been established without using Foreign Key.
