@@ -53,8 +53,8 @@
 
 * SQL Data Types
 	1. String Data Types
-		a. char(size): It is used for String Data of a certain length, such as Telephone Number, Postal 		Code
-		b. varchar(size): It is used for String Data of unknown length, such as Name, Surname, Address 			etc.
+		a. char(size): It is used for String Data of a certain length, such as Telephone Number, Postal Code
+		b. varchar(size): It is used for String Data of unknown length, such as Name, Surname, Address etc.
 	2. Numeric Data Types
 		a. numeric(p,s)
 			p indicates the amount of digits used in the number.
@@ -64,7 +64,8 @@
 		b. int: It takes values between -2147483648 and 2147483647.
 		c. real: It is used for decimal numbers.
 	3. Date Data Type
-		a. date: It is used to store dates in columns in the table. Format includes Year, Month, Day. `			Standard format: YYYY-MM-dd. For example; 1982-07-01
+		a. date: It is used to store dates in columns in the table. Format includes Year, Month, Day.
+			 Standard format: YYYY-MM-dd. For example; 1982-07-01
 
 * Constraint
 	1. Unique: All data in a column is unique.
@@ -84,13 +85,22 @@
 		The table containing the Foreign Key is called Child Table, and 
 		The table containing the Primary Key is called Parent Table.
 
-* Composite Key: If a column alone does not have the feature of being a Primary Key, a Primary Key can be created by combining two columns to obtain this feature. This situation is called Composite Key.
+* Composite Key: If a column alone does not have the feature of being a Primary Key, a Primary Key can be created by
+combining two columns to obtain this feature. This situation is called Composite Key.
 
-* If the Primary Key represents real data in the world (Email, Telephone Number, Postal Code, etc.), it is called Natural Key.
-  If the Primary Key does not represent the real data in the world (created sequence number when adding records, etc.), it is called Surrogate Key.
+* If the Primary Key represents real data in the world (Email, Telephone Number, Postal Code, etc.), it is called 
+Natural Key.
+  If the Primary Key does not represent the real data in the world (created sequence number when adding records, etc.), 
+it is called Surrogate Key.
 
-* One to One Relation: Reaching from data in one table to data in another table is called One to One Relation. Here, there is a column with the same name in the first and second table. Here, the relationship has been established without using Foreign Key.
+* One to One Relation: Reaching from data in one table to data in another table is called One to One Relation. Here, 
+there is a column with the same name in the first and second table. Here, the relationship has been established without 
+using Foreign Key.
 
-  One to Many Relation: Reaching from data in one table to data in another table is called One to Many Relation. Here two tables have the same column and the second table has more than one data associated with this column. Here, the relationship has been established without using Foreign Key.
+  One to Many Relation: Reaching from data in one table to data in another table is called One to Many Relation. Here 
+two tables have the same column and the second table has more than one data associated with this column. Here, 
+the relationship has been established without using Foreign Key.
 
-  Many to Many Relation: Reaching from the data in one table to the data in a second table and from the data in the second table to multiple data in the third table is called Many to Many Relation. Here, the relationship has been established without using Foreign Key.
+  Many to Many Relation: Reaching from the data in one table to the data in a second table and from the data in the 
+second table to multiple data in the third table is called Many to Many Relation. Here, the relationship has been 
+established without using Foreign Key.

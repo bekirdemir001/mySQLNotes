@@ -1,3 +1,8 @@
+/*
+	Data Query Language(DQL):It deals with the data itself.
+		Select: Lists the data in the table.
+*/
+
 --Create a table
 CREATE TABLE student(
 id char(10),
@@ -72,6 +77,9 @@ SELECT * FROM student WHERE average_score BETWEEN 2.23 AND 3.25;
 --16. List all data whose average score is not greater than 2.25 and smaller than 3.25
 SELECT * FROM student WHERE average_score<2.25 OR average_score>3.25;
 SELECT * FROM student WHERE average_score NOT BETWEEN 2.25 AND 3.25;
+
+--17. Delete the table
+DROP TABLE student;
 
 /*
 Note: When using "between" and "not between" keywords, Bounds are inculuded.
