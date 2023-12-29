@@ -69,7 +69,10 @@
 
 * Constraint
 	1. Unique: All data in a column is unique.
+		Unique constraint can contain 2 or more "null" values.
 	2. Not Null: All data in a column does not contain Null.
+		Constraint name cannot be defined for Not Null constraint.
+		"Not Null" constraint is written only after the data type.
 	3. Check: Used to limit the range of values to be placed in a column.
 	4. Primary Key:
 		All data in a column must be Unique and must not contain Null. That is, Unique + Not Null.
@@ -84,6 +87,14 @@
 		More than one Foreign Key restriction can be used.
 		The table containing the Foreign Key is called Child Table, and 
 		The table containing the Primary Key is called Parent Table.
+	Note: pgAdmin creates constraint names according to its own rules. But we can determine this name ourselves. We can
+specify this under column names and data types.
+
+* Thanks to the FOREIGN KEY constraint;
+	1. Data cannot be entered into the Child table with data that is not in the Parent table. (Child table accepts null
+values)
+	2.The data in the parent table cannot be deleted without deleting the data in the child table.
+	3.Parent table cannot be deleted without deleting the Child table.
 
 * Composite Key: If a column alone does not have the feature of being a Primary Key, a Primary Key can be created by
 combining two columns to obtain this feature. This situation is called Composite Key.
