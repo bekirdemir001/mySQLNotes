@@ -42,7 +42,7 @@ capital varchar(30) NOT NULL,
 population int CHECK(population>10000000)
 );
 
---This Constraints can be created by the following:
+--2.Way: This Constraints can be created by the following:
 CREATE TABLE us_states (
 state_name varchar(20),
 abbreviation char(2),
@@ -52,6 +52,18 @@ population int,
 	CONSTRAINT sn_pk PRIMARY KEY (state_name),
 	CONSTRAINT abb_unq UNIQUE (abbreviation),
 	CONSTRAINT pop_check CHECK (population>10000000)
+);
+
+--3.Way: This Constraints can be created by the following:
+CREATE TABLE us_states (
+state_name varchar(20),
+abbreviation char(2),
+capital varchar(30) NOT NULL,
+population int,
+
+	PRIMARY KEY (state_name),
+	UNIQUE (abbreviation),
+	CHECK (population>10000000)
 );
 
 --Insert data into the table
@@ -81,9 +93,9 @@ DROP TABLE us_states;
 
 -------------------------------------------------------------------------------------------------------------------------------------------------
 /*
-Thanks to the FOREIGN KEY constraint;
+	Thanks to the FOREIGN KEY constraint;
 	1. Data cannot be entered into the Child table with data that is not in the Parent table. (Child table accepts null
-values)
+	values)
 	2.The data in the parent table cannot be deleted without deleting the data in the child table.
 	3.Parent table cannot be deleted without deleting the Child table.
 */
@@ -114,6 +126,18 @@ doctor_branch varchar(30),
 	
 	CONSTRAINT hn_ds_fk FOREIGN KEY (duty_station) REFERENCES hospitals(hospital_name)
 );
+
+--Second table can be created by the following:
+CREATE TABLE doctors(
+duty_station varchar(50),
+doctor_name varchar(30),
+diploma_no int,
+doctor_branch varchar(30),
+	
+	FOREIGN KEY (duty_station) REFERENCES hospitals(hospital_name)
+);
+
+--Insert data into the table 
 INSERT INTO doctors VALUES('St. Elizabeths Hospital','Tom Cruise','125456','psychiatry');
 INSERT INTO doctors VALUES('Coastal Carolina Hospital','Morgan Freeman','123765','pediatrics');
 INSERT INTO doctors VALUES('Central State Hospital','Angelina Jolie','121852','internal medicine');
