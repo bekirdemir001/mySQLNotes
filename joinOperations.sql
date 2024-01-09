@@ -87,5 +87,5 @@ SELECT B.lesson_id, B.lesson_name, B.lesson_time FROM qa_lessons AS A
 RIGHT JOIN developer_lessons AS B 
 ON A.lesson_id=b.lesson_id;
 
-
-
+--Delete the table
+DROP TABLE qa_lessons, developer_lessons;
